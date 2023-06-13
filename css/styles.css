@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+  flex: 1 1 1;
+}
+
+h1 {
+  text-align: center;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 290px;
+  width: 300px;
+  border-right: 2px solid #001616;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 600px;
+  left: 0;
+  border-top: 1px solid #001616;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.nav-list>li {
+  border-top: 1px solid #001616;
+  width: 100%;
+  margin-right: 40px;
+  padding: 8px 0 0 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+#main-doc {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: 8px;
+  margin: 0 0 110px 310px;
+  padding: 20px;
+}
+
+#foot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
