@@ -5,6 +5,7 @@ html {
 }
 
 * {
+  box-sizing: border-box;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -26,37 +27,36 @@ h1 {
 #navbar {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  min-width: 290px;
+  height: 100vh;
   width: 300px;
   border-right: 2px solid #001616;
   position: fixed;
-  top: 0px;
-  bottom: 0px;
-  right: 600px;
-  left: 0;
   border-top: 1px solid #001616;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .nav-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex: 1 0 0;
+  justify-content: stretch;
+  flex: 1 0 1;
+  overflow-y: scroll;
+  padding-left: 0.1px;
 }
 
 .nav-list>li {
+  display: block;
   border-top: 1px solid #001616;
   width: 100%;
-  margin-right: 40px;
-  padding: 8px 0 0 40px;
+  cursor: pointer;
 }
 
 .nav-link {
+  display: block;
   text-decoration: none;
+  color: #4D4E53;
+  padding: 5px 5px 5px 5px;
 }
 
 #main-doc {
@@ -79,13 +79,20 @@ h1 {
   margin-bottom: -10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-  #navbar ul {
+  .nav-list {
     display: block;
     border: 1px solid;
     height: 207px;
     overflow-y: scroll;
+    margin: 0 10px;
     padding: 2px;
   }
 
@@ -93,9 +100,10 @@ h1 {
     display: block;
     text-align: center;
     border-top: none;
+    border-bottom: 1px solid #001616;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 8px;
   }
 
 
@@ -105,22 +113,22 @@ h1 {
     position: absolute;
     top: 0;
     padding: 0;
-    margin: 0;
+    margin: 0 5px 0 5px;
     width: 100%;
     min-height: 100px;
-    max-height: 250px;
+    max-height: 200px;
     border: none;
     z-index: 1;
     border-right: none;
     border-top: none;
-    border-bottom: 2px solid;
   }
 
   #main-doc {
-    display: block;
+    display: flex;
     position: relative;
-    margin-left: 0px;
-    margin-top: 270px;
+    margin: 270px auto 0 auto;
+    padding: 10px;
+    width: 100%;
   }
 
 }
