@@ -70,6 +70,29 @@ h1 {
   padding: 20px;
 }
 
+article p {
+  margin-bottom: 10px;
+}
+
+article>ul>li {
+  margin-bottom: 10px;
+}
+
+.second-list>li {
+  margin-bottom: 5px;
+}
+
+code {
+  font-family: monospace;
+  font-size: 13px;
+  text-align: left;
+  background-color: #F7F7F7;
+  color: #4D4E53;
+  height: 25px;
+  margin: 25px auto;
+  padding: 10px 15px;
+}
+
 #foot-container {
   display: flex;
   flex-direction: row;
@@ -79,7 +102,7 @@ h1 {
   margin-bottom: -10px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
   body {
     display: flex;
     flex-direction: column;
